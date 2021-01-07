@@ -1,0 +1,68 @@
+\documentclass{jarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{overpic}
+\usepackage[margin=2cm]{geometry}
+\title{解析演習最終レポート}
+\author{土木　太郎}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{フレーム実験の説明}
+フレーム実験の概要を書く．
+
+\section{骨組み構造解析による数値計算と実験の比較}
+数値計算と実験で得られた結果を比較する．必要があれば表を用いる．
+また，数値計算と実験の値が異なる理由を考察する．
+ \begin{table}[h]
+  \caption{数値計算と実験の比較}
+  \centering
+ \begin{tabular}[t]{c|cc}\hline
+  観測点&数値解析 ($\mu\varepsilon$) & ~実~~験~($\mu\varepsilon$)\\\hline
+A  & 10.0& 11.0\\
+B  & 11.0& 12.0\\
+C  & 12.0& 13.0\\
+D  & 12.0& 13.0\\
+E  & 12.0& 13.0\\
+F  & 12.0& 13.0\\\hline
+ \end{tabular} 
+ \end{table}
+  \begin{figure}[h]
+   \centering
+\includegraphics[scale=0.7]{frame.eps}
+  \caption{ひずみの計測点(この図は不完全です)}
+  \end{figure}
+
+ \section{フレームの変形の様子}
+ 視覚的に変形の様子が分かりやすいように図を書く．
+ 変形の様子を分かりやすくするため，変形を何倍か大きくして描く．
+ また，その変形の倍率を明記する．
+ 以下の例は変形を10倍にしたときの図．
+  \begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{deformedframe.eps}
+  \caption{変形の様子}
+  \end{figure}
+ 
+\section{感想}
+感想を述べる．
+
+\section*{提出場所，締切日}
+PandAで確認すること．
+
+\vspace{10\baselineskip}
+\section*{\LaTeX のコンパイル方法}
+上記ファイルをreport.texとします．以下のように，platexのコマンドを使うとdviファイルができます．
+\begin{verbatim}
+platex report.tex
+\end{verbatim}
+dviファイルをpdfに変換します．
+\begin{verbatim}
+dvipdfmx report.dvi
+\end{verbatim}
+pdfファイルを見るためには，evinceを使います．
+\begin{verbatim}
+evince report.pdf
+\end{verbatim}
+
+\end{document}
